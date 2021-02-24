@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import servicies.PrintServiceString;
+import servicies.PrintService;
 
 
 
@@ -13,19 +13,23 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		
-		PrintServiceString p = new PrintServiceString();
+		PrintService p = new PrintService();
 		
 		System.out.print("How many values? ");
 		int values = sc.nextInt();
 		
+		//Adicionado
+		p.addValue("Juan");
+		
 		for(int i=0; i<values; i++) {
-			String value = sc.next();
+			Integer value = sc.nextInt();
 			p.addValue(value);
 		}
 		
 		p.print();
 		System.out.println();
-		System.out.println("First: " + p.first());
+		Integer x = (Integer) p.first();
+		System.out.println("First: " + x);
 		
 		
 		

@@ -5,16 +5,16 @@ import java.util.List;
 
 public class PrintService {
 
-	private List<Integer> list = new ArrayList<>();
+	private List<Object> list = new ArrayList<>();
 	
 	public PrintService() {
 	}
 	
-	public void addValue(int value) {
+	public void addValue(Object value) {
 		list.add(value);
 	}
 	
-	public int first() {
+	public Object first() {
 		if(list.isEmpty()) {
 			throw new IllegalStateException("List is empty");
 		}
