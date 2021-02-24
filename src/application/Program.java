@@ -13,13 +13,13 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		
-		PrintService p = new PrintService();
+		PrintService<Integer> p = new PrintService<>();
 		
 		System.out.print("How many values? ");
 		int values = sc.nextInt();
 		
 		//Adicionado
-		p.addValue("Juan");
+		//p.addValue("Juan");
 		
 		for(int i=0; i<values; i++) {
 			Integer value = sc.nextInt();
@@ -28,7 +28,7 @@ public class Program {
 		
 		p.print();
 		System.out.println();
-		Integer x = (Integer) p.first();
+		Integer x = p.first();
 		System.out.println("First: " + x);
 		
 		
